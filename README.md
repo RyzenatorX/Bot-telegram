@@ -4,7 +4,8 @@
 npm install
 
 ### Config
-Copy config.js.example → config.js
+
+config.js
 Isi BOT_TOKEN
 
 ### Run
