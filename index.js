@@ -3,6 +3,15 @@
 
   const bot = new Telegraf(config.BOT_TOKEN); // inisialisasi bot
 
+  const { execSync } = require("child_process");
+  const fs = require("fs");
+
+if (!fs.existsSync("node_modules/telegraf")) {
+  console.log("📦 Installing telegraf...");
+  execSync("npm install telegraf", { stdio: "inherit" });
+}
+
+
   // ==============================
   // MEMORY SPAM
   // ==============================
