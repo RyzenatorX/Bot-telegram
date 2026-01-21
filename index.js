@@ -161,6 +161,17 @@ bot.on("message", async (ctx) => {
   } catch (err) {
     console.error("⚠️ Error:", err.message);
   }
+
+  // ==============================
+// AI AUTO RESPONSE
+// ==============================
+if (msg.text) {
+  const aiReply = getAIResponse(msg.text);
+  if (aiReply) {
+    await ctx.reply(aiReply, { parse_mode: "Markdown" });
+    return;
+  }
+} 
 });
 
 // ==============================
