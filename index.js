@@ -14,6 +14,7 @@ if (!fs.existsSync("node_modules/telegraf")) {
 // ==============================
 const { Telegraf } = require("telegraf");
 const config = require("./config");
+const { getAIResponse } = require("./ai");
 
 // ==============================
 // INIT BOT
